@@ -1,0 +1,17 @@
+
+crypto_map: VPN
+crypto_map_interface: GigabitEthernet2
+crypto_map_source_interface: Loopback0
+
+ipsec_tunnels:
+
+  - tunnel_name: headend
+    seq: 10
+    peer_ip: 172.16.252.0
+    transform_encryption: esp-3des
+    transform_auth: esp-md5-hmac
+    isakmp_encr: aes
+    isakmp_auth: pre-share
+    isakmp_key: cisco
+    acl_lines:
+      - permit ip 192.168.3.0 0.0.0.255 192.168.0.0 0.0.0.255

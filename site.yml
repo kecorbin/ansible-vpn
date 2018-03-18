@@ -1,0 +1,9 @@
+---
+- name: Configure Partner1
+  hosts: all
+  connection: local
+  vars:
+    cli:
+      host: "{{ ansible_host }}"
+  roles:
+    - vpn-router
