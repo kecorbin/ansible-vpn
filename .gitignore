@@ -1,3 +1,10 @@
+# ansible stuff
 site.retry
-.virl/
 ansible.log
+
+# virl stuff
+.virl/
+.project
+
+# environment
+*.env
