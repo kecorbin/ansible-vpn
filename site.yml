@@ -1,5 +1,5 @@
 ---
-- name: Configure Partner1
+- name: Configure VPN Connections
   hosts: all
   connection: local
   vars:
