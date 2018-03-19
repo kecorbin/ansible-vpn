@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <topology xmlns="http://www.cisco.com/VIRL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="0.95" xsi:schemaLocation="http://www.cisco.com/VIRL https://raw.github.com/CiscoVIRL/schema/v0.95/virl.xsd">
-  <extensions>
-    <entry key="management_network" type="String">flat</entry>
-  </extensions>
-  <node name="headend" type="SIMPLE" subtype="CSR1000v" location="349,118" ipv4="172.16.252.6" ipv6="2001:db8:b:0:1::2">
+    <extensions>
+        <entry key="management_network" type="String">flat</entry>
+    </extensions>
+    <node name="headend" type="SIMPLE" subtype="CSR1000v" location="361,129" ipv4="172.16.252.6" ipv6="2001:db8:b:0:1::2">
         <extensions>
+            <entry key="ansible_group" type="String">headends</entry>
             <entry key="AutoNetkit.mgmt_ip" type="string"></entry>
             <entry key="config" type="String">! IOS Config generated on 2018-02-07 20:26
 ! by autonetkit_0.23.5
@@ -102,7 +103,6 @@ router ospf 1
   network 192.168.0.0 0.0.255.255 area 0
 
 end</entry>
-            <entry key="static_ip" type="String">10.94.241.230</entry>
         </extensions>
         <interface id="0" name="GigabitEthernet2" ipv4="172.16.0.5" netPrefixLenV4="30"/>
         <interface id="1" name="GigabitEthernet3" ipv4="172.16.0.25" netPrefixLenV4="30"/>
@@ -218,7 +218,7 @@ router ospf 1
 
 !
 end</entry>
-            <entry key="static_ip" type="String">10.94.241.229</entry>
+
         </extensions>
         <interface id="0" name="GigabitEthernet2" ipv4="172.16.0.6" netPrefixLenV4="30"/>
         <interface id="1" name="GigabitEthernet3" ipv4="172.16.0.9" netPrefixLenV4="30"/>
@@ -228,6 +228,7 @@ end</entry>
     </node>
     <node name="partner1" type="SIMPLE" subtype="CSR1000v" location="210,359" ipv4="172.16.252.1">
         <extensions>
+            <entry key="ansible_group" type="String">remotes</entry>
             <entry key="AutoNetkit.mgmt_ip" type="string"></entry>
             <entry key="config" type="String">! IOS Config generated on 2018-02-07 20:26
 ! by autonetkit_0.23.5
@@ -322,13 +323,14 @@ router ospf 1
 !
 !
 end</entry>
-            <entry key="static_ip" type="String">10.94.241.231</entry>
+
         </extensions>
         <interface id="0" name="GigabitEthernet2" ipv4="172.16.0.10" netPrefixLenV4="30"/>
         <interface id="1" name="GigabitEthernet3" ipv4="172.16.0.30" netPrefixLenV4="30"/>
     </node>
-    <node name="partner2" type="SIMPLE" subtype="CSR1000v" location="300,361" ipv4="172.16.252.2">
+    <node name="partner2" type="SIMPLE" subtype="CSR1000v" location="306,359" ipv4="172.16.252.2">
         <extensions>
+            <entry key="ansible_group" type="String">remotes</entry>
             <entry key="AutoNetkit.mgmt_ip" type="string"></entry>
             <entry key="config" type="String">! IOS Config generated on 2018-02-07 20:26
 ! by autonetkit_0.23.5
@@ -424,13 +426,14 @@ router ospf 1
   network 192.168.0.0 0.0.255.255 area 0
 !
 end</entry>
-            <entry key="static_ip" type="String">10.94.241.232</entry>
+
         </extensions>
         <interface id="0" name="GigabitEthernet2" ipv4="172.16.0.14" netPrefixLenV4="30"/>
         <interface id="1" name="GigabitEthernet3" ipv4="172.16.0.34" netPrefixLenV4="30"/>
     </node>
-    <node name="partner3" type="SIMPLE" subtype="CSR1000v" location="410,364" ipv4="172.16.252.3">
+    <node name="partner3" type="SIMPLE" subtype="CSR1000v" location="402,362" ipv4="172.16.252.3">
         <extensions>
+            <entry key="ansible_group" type="String">remotes</entry>
             <entry key="AutoNetkit.mgmt_ip" type="string"></entry>
             <entry key="config" type="String">! IOS Config generated on 2018-02-07 20:26
 ! by autonetkit_0.23.5
@@ -524,13 +527,14 @@ router ospf 1
   network 192.168.0.0 0.0.255.255 area 0
 !
 end</entry>
-            <entry key="static_ip" type="String">10.94.241.233</entry>
+
         </extensions>
         <interface id="0" name="GigabitEthernet2" ipv4="172.16.0.18" netPrefixLenV4="30"/>
         <interface id="1" name="GigabitEthernet3" ipv4="172.16.0.38" netPrefixLenV4="30"/>
     </node>
-    <node name="partner4" type="SIMPLE" subtype="CSR1000v" location="507,360" ipv4="172.16.252.4">
+    <node name="partner4" type="SIMPLE" subtype="CSR1000v" location="499,364" ipv4="172.16.252.4">
         <extensions>
+            <entry key="ansible_group" type="String">remotes</entry>
             <entry key="AutoNetkit.mgmt_ip" type="string"></entry>
             <entry key="config" type="String">! IOS Config generated on 2018-02-07 20:26
 ! by autonetkit_0.23.5
@@ -624,13 +628,14 @@ router ospf 1
   network 192.168.0.0 0.0.255.255 area 0
 !
 end</entry>
-            <entry key="static_ip" type="String">10.94.241.234</entry>
+
         </extensions>
         <interface id="0" name="GigabitEthernet2" ipv4="172.16.0.22" netPrefixLenV4="30"/>
         <interface id="1" name="GigabitEthernet3" ipv4="172.16.0.42" netPrefixLenV4="30"/>
     </node>
-    <node name="host1" type="SIMPLE" subtype="lxc" location="178,468">
+    <node name="host1" type="SIMPLE" subtype="lxc" location="209,465">
         <extensions>
+            <entry key="ansible_group" type="String">servers</entry>
             <entry key="config" type="string">#cloud-config
 bootcmd:
 - ln -s -t /etc/rc.d /etc/rc.local
@@ -674,12 +679,13 @@ write_files:
     route add -net 192.168.0.0/16 gw 192.168.1.1 dev eth1
     exit 0
 </entry>
-            <entry key="static_ip" type="String">10.94.241.241</entry>
+
         </extensions>
         <interface id="0" name="eth1" ipv4="172.16.0.29" netPrefixLenV4="30"/>
     </node>
-    <node name="host2" type="SIMPLE" subtype="lxc" location="288,461">
+    <node name="host2" type="SIMPLE" subtype="lxc" location="301,463">
         <extensions>
+            <entry key="ansible_group" type="String">servers</entry>
             <entry key="config" type="string">#cloud-config
 bootcmd:
 - ln -s -t /etc/rc.d /etc/rc.local
@@ -723,12 +729,13 @@ write_files:
     route add -net 192.168.0.0/16 gw 192.168.2.1 dev eth1
     exit 0
 </entry>
-            <entry key="static_ip" type="String">10.94.241.242</entry>
+
         </extensions>
         <interface id="0" name="eth1"/>
     </node>
-    <node name="host3" type="SIMPLE" subtype="lxc" location="405,464">
+    <node name="host3" type="SIMPLE" subtype="lxc" location="411,460">
         <extensions>
+            <entry key="ansible_group" type="String">servers</entry>
             <entry key="config" type="string">#cloud-config
 bootcmd:
 - ln -s -t /etc/rc.d /etc/rc.local
@@ -772,12 +779,13 @@ write_files:
     route add -net 192.168.0.0/16 gw 192.168.3.1 dev eth1
     exit 0
 </entry>
-            <entry key="static_ip" type="String">10.94.241.243</entry>
+
         </extensions>
         <interface id="0" name="eth1"/>
     </node>
-    <node name="host4" type="SIMPLE" subtype="lxc" location="498,460">
+    <node name="host4" type="SIMPLE" subtype="lxc" location="508,461">
         <extensions>
+            <entry key="ansible_group" type="String">servers</entry>
             <entry key="config" type="string">#cloud-config
 bootcmd:
 - ln -s -t /etc/rc.d /etc/rc.local
@@ -821,11 +829,11 @@ write_files:
     route add -net 192.168.0.0/16 gw 192.168.4.1 dev eth1
     exit 0
 </entry>
-            <entry key="static_ip" type="String">10.94.241.244</entry>
+
         </extensions>
         <interface id="0" name="eth1"/>
     </node>
-    <node name="host0" type="SIMPLE" subtype="lxc" location="357,42">
+    <node name="host0" type="SIMPLE" subtype="lxc" location="360,42">
         <extensions>
             <entry key="config" type="string">#cloud-config
 bootcmd:
@@ -870,7 +878,6 @@ write_files:
     route add -net 192.168.0.0/16 gw 192.168.0.1 dev eth1
     exit 0
 </entry>
-            <entry key="static_ip" type="String">10.94.241.240</entry>
         </extensions>
         <interface id="0" name="eth1" ipv4="172.16.0.26" netPrefixLenV4="30"/>
     </node>
