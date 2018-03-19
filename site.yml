@@ -1,6 +1,15 @@
 ---
-- name: Configure VPN Connections
-  hosts: all
+- name: Configure Headend VPN Routers
+  hosts: headends
+  connection: local
+  vars:
+    cli:
+      host: "{{ ansible_host }}"
+  roles:
+    - vpn-router
+
+- name: Configure Remote VPN Routers
+  hosts: remotes
   connection: local
   vars:
     cli:
